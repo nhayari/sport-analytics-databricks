@@ -15,7 +15,7 @@ targets:
 spark_conf:
   spark.jars.packages: "org.postgresql:postgresql:42.6.0"
   ## Optionally, there could be 'staging' or 'prod' targets here.
-  #
+  
   # prod:
   #   workspace:
   #     host: https://dbc-fgfgfgf-4629.cloud.databricks.com
