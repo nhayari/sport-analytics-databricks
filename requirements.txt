@@ -1,0 +1,11 @@
+pyspark
+psycopg2-binary
+databricks-cli
+pandas
+#pyspark==3.5.0
+databricks-sql-connector==1.2.0
+#databricks-cli==0.18.0
+#psycopg2-binary==2.9.9
+python-dotenv==1.0.0
+pyarrow==14.0.1
+delta-spark==3.0.0

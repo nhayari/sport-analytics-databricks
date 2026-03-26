@@ -1,0 +1,21 @@
+# This is a Databricks asset bundle definition for sport-analytics-databricks.
+# The Databricks extension requires databricks.yml configuration file.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+
+bundle:
+  name: sport-analytics-databricks
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-cbe6abcf-4629.cloud.databricks.com
+
+spark_conf:
+  spark.jars.packages: "org.postgresql:postgresql:42.6.0"
+  ## Optionally, there could be 'staging' or 'prod' targets here.
+  #
+  # prod:
+  #   workspace:
+  #     host: https://dbc-cbe6abcf-4629.cloud.databricks.com
