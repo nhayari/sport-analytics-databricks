@@ -1,7 +1,8 @@
 # config/loader.py
 import os
+os.environ["ENV"] = "prod"
+ENV = os.getenv("ENV", "prod")
 
-ENV = os.getenv("ENV", "dev")
 BRONZE_DB = "bronze"
 
 # -----------------------------------
