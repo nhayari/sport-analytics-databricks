@@ -26,14 +26,14 @@ def get_secret(scope, key, default=None):
 # -----------------------------------
 if ENV == "prod":
     POSTGRES_CONFIG = {
-        "url": f"jdbc:postgresql://{get_secret('prod', 'pg_host', 'prod-host-test')}:5432/sport_db",
+        "url": f"jdbc:postgresql://{get_secret('prod', 'pg_host', 'prod-host-test')}:5432/postgres",
         "user": get_secret("prod", "pg_user", "prod_user_test"),
         "password": get_secret("prod", "pg_password", "prod_password_test"),
         "driver": "org.postgresql.Driver"
     }
 else:
     POSTGRES_CONFIG = {
-        "url": f"jdbc:postgresql://bddatahub.ck2iq8vqjsru.eu-west-3.rds.amazonaws.com:5432/bddatahub",
+        "url": f"jdbc:postgresql://bddatahub.ck2iq8vqjsru.eu-west-3.rds.amazonaws.com:5432/postgres",
         "user": get_secret("dev", "pg_user", "ifdis"),
         "password": get_secret("dev", "pg_password", "my_password"),
         "driver": "org.postgresql.Driver"
@@ -41,7 +41,7 @@ else:
 
     
 """     POSTGRES_CONFIG = {
-        "url": f"jdbc:postgresql://{get_secret('dev', 'pg_host', '192.168.1.31')}:5432/bddatahub",
+        "url": f"jdbc:postgresql://{get_secret('dev', 'pg_host', '192.168.1.31')}:5432/postgres",
         "user": get_secret("dev", "pg_user", "ifdis"),
         "password": get_secret("dev", "pg_password", "my_password"),
         "driver": "org.postgresql.Driver"
