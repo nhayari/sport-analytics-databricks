@@ -10,12 +10,10 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://dbc-fgfgfgf-4629.cloud.databricks.com
+      host: https://dbc-cbe6abcf-4629.cloud.databricks.com
 
-spark_conf:
-  spark.jars.packages: "org.postgresql:postgresql:42.6.0"
   ## Optionally, there could be 'staging' or 'prod' targets here.
-  
+  #
   # prod:
   #   workspace:
-  #     host: https://dbc-fgfgfgf-4629.cloud.databricks.com
+  #     host: https://dbc-cbe6abcf-4629.cloud.databricks.com
