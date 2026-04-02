@@ -32,8 +32,16 @@ if ENV == "prod":
     }
 else:
     POSTGRES_CONFIG = {
-        "url": f"jdbc:postgresql://{get_secret('dev', 'pg_host', 'localhost')}:5432/sport_db",
-        "user": get_secret("dev", "pg_user", "dev_user_test"),
-        "password": get_secret("dev", "pg_password", "dev_password_test"),
+        "url": f"jdbc:postgresql://bddatahub.ck2iq8vqjsru.eu-west-3.rds.amazonaws.com:5432/bddatahub",
+        "user": get_secret("dev", "pg_user", "ifdis"),
+        "password": get_secret("dev", "pg_password", "my_password"),
         "driver": "org.postgresql.Driver"
-    }
+    } 
+
+    
+"""     POSTGRES_CONFIG = {
+        "url": f"jdbc:postgresql://{get_secret('dev', 'pg_host', '192.168.1.31')}:5432/bddatahub",
+        "user": get_secret("dev", "pg_user", "ifdis"),
+        "password": get_secret("dev", "pg_password", "my_password"),
+        "driver": "org.postgresql.Driver"
+    } """
