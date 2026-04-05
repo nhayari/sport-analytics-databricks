@@ -1,5 +1,15 @@
-# config/loader.py
+from databricks.connect import DatabricksSession
+from databricks.sdk import WorkspaceClient
 import os
+
+# === Connexion au Serverless Compute ===
+#spark = DatabricksSession.builder.serverless().profile("DEFAULT").getOrCreate()
+
+# === dbutils (supporté : fs, secrets, et partiellement widgets) ===nourdatabricks
+w = WorkspaceClient(profile="DEFAULT")
+dbutils = w.dbutils
+
+
 os.environ["ENV"] = "prod"
 ENV = os.getenv("ENV", "prod")
 
@@ -8,7 +18,7 @@ BRONZE_DB = "bronze"
 # -----------------------------------
 # Détection propre de dbutils
 # -----------------------------------
-dbutils = globals().get("dbutils", None)
+#dbutils = globals().get("dbutils", None)
 
 # -----------------------------------
 # Fonction secrets universelle

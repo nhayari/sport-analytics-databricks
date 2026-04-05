@@ -1,0 +1,7 @@
+{
+  "name": "dev_test_connexion_postgres",
+  "existing_cluster_id": "1badf0f602f74add",
+  "spark_python_task": {
+    "python_file": "/Repos/sport/sport-analytics-databricks/tests/test_postgres_connection.py"
+  }
+}
