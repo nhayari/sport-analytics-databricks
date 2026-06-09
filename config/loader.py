@@ -44,15 +44,15 @@ if ENV == "prod":
 else:
     POSTGRES_CONFIG = {
         "url": f"jdbc:postgresql://mabase.identifiant.region.rds.amazonaws.com:5432/postgres",
-        "user": get_secret("dev", "pg_user", "ifdis"),
-        "password": get_secret("dev", "pg_password", "my_password"),
+        "user": get_secret("dev", "pg_user", "user"),
+        "password": get_secret("dev", "pg_password", "password"),
         "driver": "org.postgresql.Driver"
     } 
 
     
 """     POSTGRES_CONFIG = {
         "url": f"jdbc:postgresql://{get_secret('dev', 'pg_host', 'localhost')}:5432/postgres",
-        "user": get_secret("dev", "pg_user", "ifdis"),
-        "password": get_secret("dev", "pg_password", "my_password"),
+        "user": get_secret("dev", "pg_user", "user"),
+        "password": get_secret("dev", "pg_password", "password"),
         "driver": "org.postgresql.Driver"
     } """
