@@ -43,7 +43,7 @@ if ENV == "prod":
     }
 else:
     POSTGRES_CONFIG = {
-        "url": f"jdbc:postgresql://bddatahub.ck2iq8vqjsru.eu-west-3.rds.amazonaws.com:5432/postgres",
+        "url": f"jdbc:postgresql://mabase.identifiant.region.rds.amazonaws.com:5432/postgres",
         "user": get_secret("dev", "pg_user", "ifdis"),
         "password": get_secret("dev", "pg_password", "my_password"),
         "driver": "org.postgresql.Driver"
@@ -51,7 +51,7 @@ else:
 
     
 """     POSTGRES_CONFIG = {
-        "url": f"jdbc:postgresql://{get_secret('dev', 'pg_host', '192.168.1.31')}:5432/postgres",
+        "url": f"jdbc:postgresql://{get_secret('dev', 'pg_host', 'localhost')}:5432/postgres",
         "user": get_secret("dev", "pg_user", "ifdis"),
         "password": get_secret("dev", "pg_password", "my_password"),
         "driver": "org.postgresql.Driver"
